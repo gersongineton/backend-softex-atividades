@@ -1,0 +1,14 @@
+Udemy.com
+
+<button type="button" class="udlite-btn udlite-btn-large udlite-btn-brand udlite-heading-md add-to-cart" style="width: 100%;">Adicionar ao carrinho</button>
+
+Função de enviar ítem para o carrinho.
+
+
+
+softexrecife.joyclass.com
+
+<button _ngcontent-hme-c326="" mat-flat-button="" class="mat-focus-indicator finish-button mat-flat-button mat-button-base"><span class="mat-button-wrapper">Enviar</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button>
+
+Função de enviar projeto para a plataforma
+
