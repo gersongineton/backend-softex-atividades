@@ -1,0 +1,45 @@
+body{
+    background: rgb(70, 142, 236);
+    font: normal 15px Arial;
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 3%;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.363);
+}
+
+footer{
+    color: aliceblue;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.btn{
+    width: 50%;
+}
+#resultado{
+    margin: 15px;
+    
+}
+
+.number{
+    width: 100%;
+
+}
+div{
+    text-align: center;
+}
+
+input{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<!-- Com os conceitos aprendidos, crie um programa de calculadora que: 
+
+receba dois valores, que devem ser salvos em variáveis; 
+o usuário deve colocar qual operador ele vai utilizar por meio dos símbolos aritméticos; 
+com os dois valores e o operador definido, o programa deve fazer a operação e retornar o resultado; 
+se houver divisão, você deve retornar o resultado e a sobra, caso haja alguma.  -->
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <div>
+                <label for="numero1">Primeiro número</label>            
+                <input class="number" type="number" id="numero1" min="0">
+            </div>
+            <div>
+                <label for="numero2">Segundo número</label>          
+                <input class="number" type="number" id="numero2" min="0">                 
+            </div>
+
+
+            <div class="radio">
+                <p>Escolha a operação</p>
+                <input type="radio" name="rdoperadores" id="som">
+                <label for="som">+ Soma</label>
+                <input type="radio" name="rdoperadores" id="sub">
+                <label for="sub">- Subtração</label>
+                <input type="radio" name="rdoperadores" id="mul">
+                <label for="mul">* Multiplicação</label>
+                <input type="radio" name="rdoperadores" id="div">
+                <label for="div">/ Divisão</label>
+            </div>    
+                <input class="btn" type="button" value="Calcular" onclick="calcular()">
+            
+
+        </div>
+
+
+        <hr>
+        <div id="resultado"></div>
+        <div id="resultado2"></div>
+    </section>
+    <footer>
+        <p>Todos o direito reservados | Gineton<span>&copy;</span></p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
