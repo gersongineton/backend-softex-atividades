@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desenvolvimento 06.1</title>
+</head>
+<body style="background: #7f8c8d; font: normal 15px Arial;">
+
+<!--
+Crie dois códigos de sistema de notas para uma escola. O primeiro código deve ser um programa que informa se o aluno reprovou, ou não, com base nas três notas que ele adicionou ao programa. Utilize, no mínimo, um operador de atribuição e um operador ternário. 
+O segundo código é um programa que o aluno deve escrever duas notas e o retorno informa a nota mínima que ele deve tirar na próxima prova para poder passar com nota sete.
+-->
+    <header style="color: aliceblue; text-align: center;">
+        <h1>Primeiro código</h1>
+    </header>
+    <section style="background: white; border-radius: 10px; padding: 15px; width: 500px; margin: auto; box-shadow: 3px 3px 10px rgba(0,0,0,0.363);">
+        <table style="text-align: left ;">
+            <tr>
+                <th style="padding-right: 20px;"><label for="nota1">Primeira nota</label></th>
+                <th><input class="number" type="number" id="nota1" min="0" max="10" style="width: 300px;"></th>
+            </tr>
+            <tr>
+                <th style="padding-right: 20px;"><label for="nota2">Segunda nota</label></th>
+                <th><input class="number" type="number" id="nota2" min="0" max="10" style="width: 300px;"></th>
+            </tr>
+            <tr>
+                <th style="padding-right: 20px;"><label for="nota3">Terceira nota</label></th>
+                <th><input class="number" type="number" id="nota3" min="0" max="10" style="width: 300px;"></th>
+            </tr>
+        </table>
+        <div style="text-align: center; padding: 10px;">
+            <input class="btn" type="button" value="Calcular" onclick="calcularMedia()">            
+        </div>           
+    <hr>
+        <div id="situacao"></div>
+    </section>
+    <footer style="color: aliceblue; text-align: center; font-style: italic;">
+        <p>Todos o direito reservados :) | Gerson Gineton<span>&copy;</span></p>
+    </footer>
+
+<script>
+    function calcularMedia() {
+        nota1 = document.getElementById("nota1")
+        nota2 = document.getElementById("nota2")
+        nota3 = document.getElementById("nota3")    
+        resutado = document.getElementById("situacao")
+        media = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value)) / 3
+        media >= 7 ? situacao.innerHTML = "Aprovado!" : situacao.innerHTML = "Reprovado!";    
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desenvolvimento 06.2</title>
+</head>
+<body style="background: #95a5a6; font: normal 15px Arial;">
+    <header style="color: aliceblue; text-align: center;">
+        <h1>Segundo código</h1>
+    </header>
+    <section style="background: white; border-radius: 10px; padding: 15px; width: 500px; margin: auto; box-shadow: 3px 3px 10px rgba(0,0,0,0.363);">
+        <table style="text-align: left ;">
+            <tr>
+                <th style="padding-right: 20px;"><label for="nota1">Primeira nota</label></th>
+                <th><input class="number" type="number" id="nota1" min="0" max="10" style="width: 300px;"></th>
+            </tr>
+            <tr>
+                <th style="padding-right: 20px;"><label for="nota2">Segunda nota</label></th>
+                <th><input class="number" type="number" id="nota2" min="0" max="10" style="width: 300px;"></th>
+            </tr>
+        </table>
+        <div style="text-align: center; padding: 10px;">
+            <input class="btn" type="button" value="Calcular" onclick="calcularMinima()">            
+        </div>           
+    <hr>
+        <div id="notaMinima"></div>
+    </section>
+    <footer style="color: aliceblue; text-align: center; font-style: italic;">
+        <p>Todos o direito reservados :) | Gerson Gineton<span>&copy;</span></p>
+    </footer>
+
+<script>
+    function calcularMinima() {
+        nota1 = document.getElementById("nota1")
+        nota2 = document.getElementById("nota2") 
+        notaMinima = document.getElementById("notaMinima")
+        minima = parseFloat(21 - (Number(nota1.value) + Number(nota2.value)))
+
+        minima > 10 ?   notaMinima.innerHTML = `Reprovado! Faltou ${minima} pontos para alcançar a média!` :
+                        notaMinima.innerHTML = `Você precisa de no mínimo ${minima} para ser aprovado!`  
+    }
+</script>
+</body>
+</html>
