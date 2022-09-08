@@ -4,12 +4,10 @@
     
     await database.sync();
 
-    const usuarios = await User.findAll();
+    const usuarios = await User.findByPk(1);
     if (usuarios) {
-        console.log("OK");
+        console.log("Retorno OK, conexão estabelecida!");            
+    }else {
+        console.log("Erro de conexão ou o registro não existe");             
     }
-    else{
-        console.log("Deu ruim");
-    }
-    
 })();
