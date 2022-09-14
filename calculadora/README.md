@@ -30,4 +30,5 @@ Obesidade Grau II 35 a 40 kg/m2 Apneia do sono, falta de ar
 
 Obesidade Grau III maior que Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC
 
+A atividade foi desenvolvida em um único arquivo chamado: CalculandoImc.html.
 
