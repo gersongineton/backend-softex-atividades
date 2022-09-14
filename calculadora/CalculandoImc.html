@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Calcula IMC</title>
+</head>
+<body>
+    <section>
+        <div class="container">            
+            <h2 class="header">Calcular IMC</h2>
+            <div class="card horizontal">
+                <div class="card-stacked">
+                <div class="card-content">
+                    <div class="input-field col s6">
+                        <input id="peso" type="number" class="validate peso">
+                        <label for="peso">Peso em Quilos (Ex: 65,500)</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="altura" type="number" class="validate">
+                        <label for="altura">Altura em Metros (Ex: 1,60)</label>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" onclick="clculaimc()">Calcular IMC                        
+                    </button>
+                </div>
+                <div class="card-action">
+                    <p id="resposta">Descubra seu IMC e seus respectivos sintomas.</p>
+                </div>
+                </div>
+            </div>                      
+        </div>
+    </section>
+<script>
+    let clculaimc = () => {
+        let peso        = document.querySelector('#peso')
+        let altura      = document.querySelector('#altura')
+        let imc         = ((peso.value) / ((altura.value)**2))        
+        let seuimc      = imc.toFixed(2) //Arredondando casas decimais
+        let resposta    = document.querySelector('#resposta')
+
+        if ((peso.value) <= 0 || (altura.value) <= 0){
+            resposta.innerHTML = `Algum valor está incorreto!` 
+        }
+
+        else if (seuimc > 40 ) {//Obesidade Grau III
+            resposta.innerHTML = `Seu IMC é: ${seuimc} você está com Obesidade Grau III e pode apresentar Refluxo, dificuldade para se mover, escaras, diabetes, infarto ou AVC.`
+        }
+        else if (seuimc >= 35 && seuimc <= 40 ) {//Obesidade Grau II
+            resposta.innerHTML = `Seu IMC é: ${seuimc} você está com Obesidade Grau II e pode apresentar Apneia do sono ou falta de ar.`
+        }
+        else if (seuimc >= 30 && seuimc < 35 ) {//Obesidade Grau I
+            resposta.innerHTML = `Seu IMC é: ${seuimc} você está com Obesidade Grau I e pode apresentar Diabetes, angina, infarto, aterosclerose.`
+        }
+        else if (seuimc >= 25 && seuimc < 30 ) {//Acima do peso
+            resposta.innerHTML = `Seu IMC é: ${seuimc}. Está acima do peso e pode apresentar Fadiga, má circulação, varizes.`
+        }
+        else if (seuimc >= 18.5 && seuimc < 25 ) {//Peso normal
+            resposta.innerHTML = `Seu IMC é: ${seuimc}. Peso normal, apresenta Menor risco de doenças cardíacas e vasculares.`
+        }
+        else if (seuimc >= 17 && seuimc < 18.5 ) {//Abaixo do peso
+            resposta.innerHTML = `Seu IMC é: ${seuimc}. Está Abaixo do peso, pode apresentar fadiga, stress, ansiedade.`
+        }
+        else if (seuimc >= 16 && seuimc < 17 ) {//Muito abaixo do peso
+            resposta.innerHTML = `Seu IMC é: ${seuimc}. Está muito abaixo do peso, pode apresentar queda de cabelo, infertilidade, ausência menstrual.`  
+        }
+        else {
+           resposta.innerHTML = `Seu IMC é: ${seuimc}, não catalogado nesse aplicativo.`     
+        }        
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+<footer class="center">Exercício | Backend | Softex Recife | Gerson Gineton</footer>
+</html>
